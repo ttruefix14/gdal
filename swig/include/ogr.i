@@ -1306,9 +1306,9 @@ public:
     return (OGRGeometryShadow *) OGR_L_GetSpatialFilter(self);
   }
 
-#ifdef SWIGCSHARP
+/* #ifdef SWIGCSHARP
   %apply ( const char *utf8_path ) { (char* filter_string) };
-#endif
+#endif */
   OGRErr SetAttributeFilter(char* filter_string) {
     return OGR_L_SetAttributeFilter((OGRLayerShadow*)self, filter_string);
   }
